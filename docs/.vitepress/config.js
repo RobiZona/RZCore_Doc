@@ -23,22 +23,22 @@ export default {
     siteTitle: "RobiZona",
     outline: "deep",
     nav: [
-      { text: "Docs", link: "/api" },
+      { text: "Docs", link: "/functions" },
       { text: "Team", link: "/team" },
     ],
     socialLinks: [
       { icon: "github", link: "https://github.com/RobiZona" },
     ],
     sidebar: {
-      "/api/": getSidebar({
+      "/functions/": getSidebar({
         contentRoot: "/docs",
-        contentDirs: ["api"],
+        contentDirs: ["functions"],
         collapsible: true,
         collapsed: false,
       }),
-      "/api": getSidebar({
+      "/functions": getSidebar({
         contentRoot: "/docs",
-        contentDirs: ["api"],
+        contentDirs: ["functions"],
         collapsible: true,
         collapsed: false,
       }),

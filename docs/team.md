@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Team
+title: RobiZona
 # Meta property
 head:
   - - meta
@@ -11,13 +11,13 @@ head:
       content: RZCore Docs
   - - meta
     - property: og:image
-      content: https://avatars.githubusercontent.com/u/64416274?s=200&v=4
+      content: https://avatars.githubusercontent.com/u/72941167?s=200&v=4
   - - meta
     - name: title
       content: RZCore Docs
   - - meta
     - name: twitter:card
-      content: https://avatars.githubusercontent.com/u/64416274?s=200&v=4
+      content: https://avatars.githubusercontent.com/u/72941167?s=200&v=4
   - - link
     - rel: icon
       type: image/png
@@ -33,7 +33,14 @@ import {
 } from 'vitepress/theme'
 
 const developers = [
-    
+    {
+        avatar: 'https://avatars.githubusercontent.com/u/72941167?v=4',
+        name: 'RobiZona',
+        title: 'Cane',
+        links: [
+            { icon: 'github', link: 'https://github.com/RobiZona' },
+        ]
+    },
 ]
 
 </script>
@@ -44,7 +51,7 @@ const developers = [
     <template #lead></template>
   </VPTeamPageTitle>
   <VPTeamPageSection>
-    <template #title>Developers</template>
+    <template #title>Dev</template>
     <template #lead></template>
     <template #members>
      <VPTeamMembers size="medium" :members="developers" />

@@ -23,6 +23,7 @@ export default {
     siteTitle: "RobiZona",
     outline: "deep",
     nav: [
+      { text: "Guida", link: "/guida" },
       { text: "Docs", link: "/functions" },
       { text: "Team", link: "/team" },
     ],
@@ -30,9 +31,15 @@ export default {
       { icon: "github", link: "https://github.com/RobiZona" },
     ],
     sidebar: {
-      "/functions/": getSidebar({
-        contentRoot: "/docs",
-        contentDirs: ["functions"],
+      "/guida/rz_core/": getSidebar({
+        contentRoot: "/scripts",
+        contentDirs: ["rz_core"],
+        collapsible: true,
+        collapsed: false,
+      }),
+      "/guida/rz_inventory/": getSidebar({
+        contentRoot: "/scripts",
+        contentDirs: ["rz_inventory"],
         collapsible: true,
         collapsed: false,
       }),

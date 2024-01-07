@@ -37,7 +37,7 @@ export default {
           collapsible: true,
           collapsed: true,
           items: [
-            { text: "Guida Player", link: "/guida/rz_core/coreguida1" },
+            { text: "Guida Player", link: "/scripts/rz_core/coreguida1" },
             // altri link alle pagine di RZ Core
           ],
         },
@@ -46,7 +46,7 @@ export default {
           collapsible: true,
           collapsed: true,
           items: [
-            { text: "Guida Player", link: "/guida/rz_inventory/inventarioguida1" },
+            { text: "Guida Player", link: "/scripts/rz_inventory/inventarioguida1" },
             // altri link alle pagine di RZ Core
           ],
         },

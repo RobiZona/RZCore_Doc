@@ -9,7 +9,7 @@ const { Layout } = DefaultTheme
     <Layout>
         <template #nav-bar-content-before>
             <GoogleTranslateSelect default-language-code="it" default-page-language-code="it"
-                :fetch-browser-language="true" trigger="click"/>
+                :fetch-browser-language="false" trigger="click"/>
         </template>
     </Layout>
 </template>

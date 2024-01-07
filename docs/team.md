@@ -39,6 +39,8 @@ const developers = [
         title: 'Cane di Pecora',
         links: [
             { icon: 'github', link: 'https://github.com/RobiZona' },
+            { icon: 'instagram', link: 'https://www.instagram.com/robizona/' },
+            { icon: 'youtube', link: 'https://www.youtube.com/robizona' },
         ]
     },
 ]

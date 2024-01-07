@@ -25,7 +25,7 @@ head:
       href: logo.png
 ---
 
-# RZCore Docs
+# RobiZona Docs
 
 Logiche per fare gli script
 

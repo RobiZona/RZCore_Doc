@@ -2,8 +2,8 @@ import { getSidebar } from "vitepress-plugin-auto-sidebar";
 
 export default {
   base: "/RZCore_Doc/",
-  title: "RZCore",
-  description: "RZCore",
+  title: "RobiZona",
+  description: "RobiZona",
   lastUpdated: true,
   cleanUrls: true,
   head: [
@@ -20,10 +20,9 @@ export default {
         "https://github.com/robizona/rzcore_doc/edit/main/docs/:path",
       text: "Edit this page on GitHub",
     },
-    siteTitle: "RZCore",
+    siteTitle: "RobiZona",
     outline: "deep",
     nav: [
-      { text: "Setup Guide", link: "/guide" },
       { text: "Docs", link: "/api" },
       { text: "Team", link: "/team" },
     ],
@@ -46,7 +45,7 @@ export default {
     },
     footer: {
       message: "Released under the GNU General Public License v2.0.",
-      copyright: "Copyright © 2024-present RZCore",
+      copyright: "Copyright © 2024-present RobiZona",
     },
   },
 };

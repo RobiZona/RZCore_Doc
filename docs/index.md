@@ -3,7 +3,7 @@ layout: home
 title: Home
 # Hero section
 hero:
-  name: RZCore
+  name: RobiZona
   text: Sito Personale di documantazione
   image:
     src: /logo.png

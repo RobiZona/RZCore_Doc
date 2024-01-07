@@ -31,19 +31,25 @@ export default {
       { icon: "github", link: "https://github.com/RobiZona" },
     ],
     sidebar: {
-      "/guida": [
+      "/guida/": [
         {
-          text: "RZ Core", // Titolo visibile per la sottosezione rz_core
+          text: "RZ Core",
           collapsible: true,
-          collapsed: false,
-          items: getSidebarItems("/scripts/rz_core"), // Assumi una funzione getSidebarItems per generare gli elementi
+          collapsed: true,
+          items: [
+            { text: "Guida Player", link: "/guida/rz_core/coreguida1" },
+            // altri link alle pagine di RZ Core
+          ],
         },
         {
-          text: "RZ Inventory", // Titolo visibile per la sottosezione rz_inventory
+          text: "RZ Inventory",
           collapsible: true,
-          collapsed: false,
-          items: getSidebarItems("/scripts/rz_inventory"), // Assumi una funzione getSidebarItems per generare gli elementi
-        }
+          collapsed: true,
+          items: [
+            { text: "Guida Player", link: "/guida/rz_inventory/inventarioguida1" },
+            // altri link alle pagine di RZ Core
+          ],
+        },
       ],
       "/functions": getSidebar({
         contentRoot: "/docs",

@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: API Docs
+title: Functions Docs
 
 # Meta property
 head:

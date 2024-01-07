@@ -1,17 +1,17 @@
-## VORP CORE
+## RZ CORE
 
 ```lua
 -- on the top of your client or server files
-local VORPcore = exports.vorp_core:GetCore() -- NEW includes  new callback system
+local RZCore = exports.rz_core:GetCore() -- NEW includes  new callback system
 ```
 ### CORE UI
 
 ```lua
     -- from server side
-    TriggerClientEvent("vorp:showUi", _source, false) --hide
+    TriggerClientEvent("rz:showUi", _source, false) --hide
 
     -- from client side
-    TriggerEvent("vorp:showUi", true) --show
+    TriggerEvent("rz:showUi", true) --show
 
 ```
 
@@ -21,20 +21,20 @@ local VORPcore = exports.vorp_core:GetCore() -- NEW includes  new callback syste
 
 ```lua
 -- can also use exports or declare notification file name in fxmanifest
-VORPcore.NotifyTip("title",4000)
-VORPcore.NotifyLeft("title","subtitle","dict","icon",4000,"color")
-VORPcore.NotifyRightTip("title",4000)
-VORPcore.NotifyObjective("title",4000)
-VORPcore.NotifyTop("title","location",4000)
-VORPcore.NotifySimpleTop("title","subtitle",4000)
-VORPcore.NotifyAvanced("title","dict","icon","color",4000)
-VORPcore.NotifyCenter("title",4000)
-VORPcore.NotifyBottomRight("title",4000)
-VORPcore.NotifyFail("title","subtitle",4000)
-VORPcore.NotifyDead("title","audioref","audioname",4000)
-VORPcore.NotifyUpdate("title","subtitle",4000)
-VORPcore.NotifyWarning("title","subtitle","audioref","audioname",4000)
-VORPcore.NotifyLeftRank("title","subtitle","dict","icon",4000,"color")
+RZCore.NotifyTip("title",4000)
+RZCore.NotifyLeft("title","subtitle","dict","icon",4000,"color")
+RZCore.NotifyRightTip("title",4000)
+RZCore.NotifyObjective("title",4000)
+RZCore.NotifyTop("title","location",4000)
+RZCore.NotifySimpleTop("title","subtitle",4000)
+RZCore.NotifyAvanced("title","dict","icon","color",4000)
+RZCore.NotifyCenter("title",4000)
+RZCore.NotifyBottomRight("title",4000)
+RZCore.NotifyFail("title","subtitle",4000)
+RZCore.NotifyDead("title","audioref","audioname",4000)
+RZCore.NotifyUpdate("title","subtitle",4000)
+RZCore.NotifyWarning("title","subtitle","audioref","audioname",4000)
+RZCore.NotifyLeftRank("title","subtitle","dict","icon",4000,"color")
 
 ```
 
@@ -42,20 +42,20 @@ VORPcore.NotifyLeftRank("title","subtitle","dict","icon",4000,"color")
 
 ```lua
    
- VORPcore.NotifyTip(_source,"title",4000)
- VORPcore.NotifyLeft(_source,"title","subtitle","dict","icon",4000,"color")
- VORPcore.NotifyRightTip(_source,"title",4000)
- VORPcore.NotifyObjective(_source,"title",4000)
- VORPcore.NotifyTop(_source,"title","location",4000)
- VORPcore.NotifySimpleTop(_source,"title","subtitle",4000)
- VORPcore.NotifyAvanced(_source,"title","dict","icon","color",4000)
- VORPcore.NotifyCenter(_source,"title",4000)
- VORPcore.NotifyBottomRight(_source,"title",4000)
- VORPcore.NotifyFail(_source,"title","subtitle",4000)
- VORPcore.NotifyDead(_source,"title","audioref","audioname",4000)
- VORPcore.NotifyUpdate(_source,"title","subtitle",4000)
- VORPcore.NotifyWarning(_source,"title","subtitle","audioref","audioname",4000)
- VORPcore.NotifyLeftRank(_source,"title","subtitle","dict","icon",4000,"color")
+ RZCore.NotifyTip(_source,"title",4000)
+ RZCore.NotifyLeft(_source,"title","subtitle","dict","icon",4000,"color")
+ RZCore.NotifyRightTip(_source,"title",4000)
+ RZCore.NotifyObjective(_source,"title",4000)
+ RZCore.NotifyTop(_source,"title","location",4000)
+ RZCore.NotifySimpleTop(_source,"title","subtitle",4000)
+ RZCore.NotifyAvanced(_source,"title","dict","icon","color",4000)
+ RZCore.NotifyCenter(_source,"title",4000)
+ RZCore.NotifyBottomRight(_source,"title",4000)
+ RZCore.NotifyFail(_source,"title","subtitle",4000)
+ RZCore.NotifyDead(_source,"title","audioref","audioname",4000)
+ RZCore.NotifyUpdate(_source,"title","subtitle",4000)
+ RZCore.NotifyWarning(_source,"title","subtitle","audioref","audioname",4000)
+ RZCore.NotifyLeftRank(_source,"title","subtitle","dict","icon",4000,"color")
 
 ```
 
@@ -63,8 +63,8 @@ VORPcore.NotifyLeftRank("title","subtitle","dict","icon",4000,"color")
 <Badge type="tip" text="Server Side Only" />
 
 ```lua
--- this returns a number from vorp core config
-local maxChars = VORPcore.maxCharacters 
+-- this returns a number from rz core config
+local maxChars = RZCore.maxCharacters 
 
 ```
 
@@ -74,7 +74,7 @@ local maxChars = VORPcore.maxCharacters
 ```lua
 
 -- contains functions and information from all characters
-local User = VORPcore.getUser(_source)
+local User = RZCore.getUser(_source)
 
 -- Return user group (not character group)
 local UserGroup = User.getGroup 
@@ -111,7 +111,7 @@ Character.comps
 
 ```lua
 
-local Character = VORPcore.getUser(_source).getUsedCharacter
+local Character = RZCore.getUser(_source).getUsedCharacter
 
 --Functions you can set using the API
 
@@ -139,10 +139,10 @@ Character.removeXp(100)
 -- to add a players to different instances use his server id + instance number
 -- to add players to same instance use only the instanceNumber
 local instanceNumber = 54123 -- any number
-VORPcore.instancePlayers(tonumber(GetPlayerServerId(PlayerId()))+ instanceNumber)
+RZCore.instancePlayers(tonumber(GetPlayerServerId(PlayerId()))+ instanceNumber)
 
 -- to remove the player from instance
-VORPcore.instancePlayers(0) 
+RZCore.instancePlayers(0) 
 
 ```
 
@@ -153,24 +153,24 @@ VORPcore.instancePlayers(0)
 
 ```lua
 -- SERVER SIDE ONLY
-local VORPWhitelist = {}
+local rzWhitelist = {}
 
 TriggerEvent("getWhitelistTables", function(cb)
-    VORPWhitelist = cb
+    rzWhitelist = cb
 end)
 
 
 -- userStaticID this is a static ID used to whitelist/unwhitelist or ban/unban
 -- needs identifier
-local getid = VORPwl.getEntry(identifier).getId() 
+local getid = rzwl.getEntry(identifier).getId() 
 
 -- whitelisted returns true or false
 -- needs identifier
-local getstatus = VORPwl.getEntry(identifier).getStatus() 
+local getstatus = rzwl.getEntry(identifier).getStatus() 
 
 --get players warnings
 -- use the API core to get source data
-local User = VORPcore.getUser(_source)
+local User = RZCore.getUser(_source)
 local warnstatus = User.getPlayerwarnings() 
 
 ```
@@ -190,7 +190,7 @@ local warnstatus = User.getPlayerwarnings()
 local Tables = {
     {
         name = "loadout",
-        script = "vorp_inventory",
+        script = "rz_inventory",
         sql = [[
             CREATE TABLE IF NOT EXISTS `loadout` (
                 `id` INT(11) NOT NULL AUTO_INCREMENT,
@@ -214,7 +214,7 @@ local Tables = {
     },
     {
         name = "items",
-        script = "vorp_inventory",
+        script = "rz_inventory",
         sql = [[
             CREATE TABLE IF NOT EXISTS `items` (
                 `item` VARCHAR(50) NOT NULL,
@@ -235,7 +235,7 @@ local Tables = {
 local Updates = {
     {
         name = "dropped",
-        script = "vorp_inventoryv",
+        script = "rz_inventoryv",
         find = [[
             select *
             from Information_Schema.Columns
@@ -249,7 +249,7 @@ local Updates = {
     
     {
         name = "desc",
-        script = "vorp_inventoryv",
+        script = "rz_inventoryv",
         find = [[
             select *
             from Information_Schema.Columns
@@ -265,8 +265,8 @@ local Updates = {
 
 -- DB Updater
 Citizen.CreateThread(function()
-   VORPcore.dbUpdateAddTables(Tables)
-   VORPcore.dbUpdateAddUpdates(Updates)
+   RZCore.dbUpdateAddTables(Tables)
+   RZCore.dbUpdateAddUpdates(Updates)
 
 end)
 
@@ -283,7 +283,7 @@ end)
 ---@param logo? string logo image link
 ---@param footerlogo? string link image
 ---@param avatar? string link  
-VORPcore.AddWebhook(title, webhook, description, color, name, logo, footerlogo, avatar)
+RZCore.AddWebhook(title, webhook, description, color, name, logo, footerlogo, avatar)
 
 ```
 
@@ -300,10 +300,10 @@ VORPcore.AddWebhook(title, webhook, description, color, name, logo, footerlogo, 
 ---
 ```lua
 -- top of your server file if you only need the callbacks
- local ServerRPC = exports.vorp_core:ServerRpcCall() --[[@as ServerRPC]] -- for intellisense
+ local ServerRPC = exports.rz_core:ServerRpcCall() --[[@as ServerRPC]] -- for intellisense
  -- or call core objcet
- local VORPcore = exports.vorp_core:GetCore()  -- contains callbacks as well
- local ServerRPC = VORPcore
+ local RZCore = exports.rz_core:GetCore()  -- contains callbacks as well
+ local ServerRPC = RZCore
 ```
 
 * Trigger Await Callback
@@ -348,10 +348,10 @@ print(result)
 
 ```lua
 -- top of your client files if you need only call back system
-local ClientRPC = exports.vorp_core:ClientRpcCall() --[[@as ClientRPC]] -- for intellisense
+local ClientRPC = exports.rz_core:ClientRpcCall() --[[@as ClientRPC]] -- for intellisense
 -- or get core object
-local VORPcore = exports.vorp_core:GetCore()-- contains call backs aswell
-local ClientRPC = VORPcore
+local RZCore = exports.rz_core:GetCore()-- contains call backs aswell
+local ClientRPC = RZCore
 
 ```
 * Trigger Await Callback
@@ -387,13 +387,13 @@ end)
 ### Server
 ```lua
 -- group changed
-AddEventHandler("vorp:playerGroupChange",function(source, group)
+AddEventHandler("rz:playerGroupChange",function(source, group)
 end)
 -- job changed
-AddEventHandler("vorp:playerJobChange", function(source, job) 
+AddEventHandler("rz:playerJobChange", function(source, job) 
 end)
 -- job grade changed
-AddEventHandler("vorp:playerJobGradeChange",function(source, jobgrade)
+AddEventHandler("rz:playerJobGradeChange",function(source, jobgrade)
 end) 
 
 ```
@@ -404,14 +404,14 @@ end)
 ```lua
  -- call dataview in your fxmanifest
  client_scripts {
-    '@vorp_core/client/dataview.lua'
+    '@rz_core/client/dataview.lua'
  }
 
 ```
 
 ## State Bags
 
-state bags is a new feature in vorp core that allows to syncronise data between clients
+state bags is a new feature in rz core that allows to syncronise data between clients
 
 ### Client
   * Listen for this data when you want to know that a payer has choosen a character and is In Session or Job etc
@@ -434,10 +434,10 @@ this will be removed from the docs use the above from now on as its the only sup
 
 ```lua
 -- at the top of your server file or client 
-local VORPcore = {} -- core object
+local RZCore = {} -- core object
 
 TriggerEvent("getCore", function(core)
-    VORPcore = core
+    RZCore = core
 end)
 
 ```
@@ -448,7 +448,7 @@ end)
  ---@param name string callback name
  ---@param callback fun(result:any) result 
  ---@param args? any extra arguments
- VORPcore.RpcCall(name,function(result) -- asynchronous 
+ RZCore.RpcCall(name,function(result) -- asynchronous 
    print(result)
  end,args) -- you can send extra arguments 
 ```
@@ -456,7 +456,7 @@ end)
 ```lua
 ---@param name string callback name
 ---@param callback fun(source:number, cb: fun(any), args:any)
-VORPcore.addRpcCallback("RPCcallbackname", function(source, cb, args) 
+RZCore.addRpcCallback("RPCcallbackname", function(source, cb, args) 
   return cb(any) 
 end)
 ```

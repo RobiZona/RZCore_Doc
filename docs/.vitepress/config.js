@@ -35,7 +35,7 @@ export default {
         contentRoot: "/docs",
         contentDirs: ["guida"],
         collapsible: true,
-        collapsed: true,
+        collapsed: false,
       }),
       "/functions": getSidebar({
         contentRoot: "/docs",

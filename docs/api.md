@@ -25,7 +25,7 @@ head:
       href: logo.png
 ---
 
-# RZCore API Docs
+# RZCore Docs
 
-Here you will find our latest API Documentation for developing scripts within our framework!
+Logiche per fare gli script
 

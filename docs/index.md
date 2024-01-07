@@ -11,11 +11,11 @@ hero:
   tagline: Ho sonno
   actions:
     - theme: brand
-      text: Get Started
+      text: Vai alla Guida
       link: /guide
     - theme: alt
-      text: View on GitHub
-      link: https://github.com/RZCore
+      text: Github Personale
+      link: https://github.com/RobiZona
 
 # Meta property
 head:

@@ -36,7 +36,7 @@ const developers = [
     {
         avatar: 'https://avatars.githubusercontent.com/u/72941167?v=4',
         name: 'RobiZona',
-        title: 'Cane',
+        title: 'Cane di Pecora',
         links: [
             { icon: 'github', link: 'https://github.com/RobiZona' },
         ]

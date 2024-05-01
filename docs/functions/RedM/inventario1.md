@@ -1,6 +1,6 @@
 # Logica Inventario
 
-Lo script salva in lato SERVER tutti gli item nella tabella "ServerItems" e poi controlla le armi, se sono droppate le elimina, se no le salva dentro UsersWeapons['default']
+Lo script salva in lato SERVER tutti gli item nella tabella "ServerItems" e poi controlla le armi, se sono droppate le elimina, se no le salva dentro "UsersWeapons['default']"
 
 ```lua
 MySQL.ready(function()
